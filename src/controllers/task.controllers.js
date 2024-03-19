@@ -21,15 +21,15 @@ export const createTask = async (req, res) => {
     })
     const savedTask = await newTask.save()
     res.json(savedTask)
-}
+}   
 
 export const updateTask = async (req, res) => {
     const task = await Task.findByIdAndUpdate(req.params.id, req.body, {new: true})
-    id ( !task ) return res.status(404).json({message: "Task not found"})
+    if ( !task ) return res.status(404).json({message: "Task not found"})
     res.json(task)
 }
 
 export const deleteTask = async (req, res) => {
     const task = await Task.findByIdAndDelete(req.params.id)
-    id ( !task ) return res.status(404).json({message: "Task not found"})
+    if ( !task ) return res.status(404).json({message: "Task not found"})
     res.json(task)}
