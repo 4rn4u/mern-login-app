@@ -17,7 +17,8 @@ export const createTask = async (req, res) => {
     const newTask = new Task({
         title,
         description,
-        date
+        date,
+        user: req.user.id,
     })
     const savedTask = await newTask.save()
     res.json(savedTask)
