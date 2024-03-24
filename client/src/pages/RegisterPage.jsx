@@ -8,8 +8,8 @@ function RegisterPage() {
         <input type="text"
           {...register('username', { required: true })}
           />
-        <input type="email" name="email"/>
-        <input type="password" name="password"/>
+        <input type="email" {...register('email', { required: true })}/>
+        <input type="password" {...register('', { required: true })}/>
           </form>
       
       </div>
