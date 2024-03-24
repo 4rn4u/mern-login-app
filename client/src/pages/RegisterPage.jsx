@@ -9,7 +9,7 @@ function RegisterPage() {
           {...register('username', { required: true })}
           />
         <input type="email" {...register('email', { required: true })}/>
-        <input type="password" {...register('', { required: true })}/>
+        <input type="password" {...register('pass', { required: true })}/>
           </form>
       
       </div>
